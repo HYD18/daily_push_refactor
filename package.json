@@ -1,0 +1,24 @@
+{
+  "name": "daily-push",
+  "version": "2.0.0",
+  "description": "Wechat template-message daily push for date, weather, anniversary, birthday countdowns, and daily advice.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "node --check index.js && node --check src/index.js && node --check src/config.js && node --check src/template.js && node --check src/services/http.js && node --check src/services/wechat.js && node --check src/services/weather.js && node --check src/services/hitokoto.js && node --check src/utils/date.js && node --check qinglong/ql-daily-push.js",
+    "dry-run": "node -e \"process.env.DRY_RUN='1'; require('./src/index').run().catch((error)=>{console.error(error);process.exit(1);})\""
+  },
+  "keywords": [
+    "wechat",
+    "daily-push",
+    "template-message",
+    "qweather"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "solarlunar": "^2.0.7"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

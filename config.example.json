@@ -1,0 +1,42 @@
+{
+  "timezone": "Asia/Shanghai",
+  "location": {
+    "name": "滨江区",
+    "adm": "杭州市"
+  },
+  "weather": {
+    "qweatherKey": "你的和风天气Key",
+    "indexType": "1"
+  },
+  "anniversary": {
+    "label": "恋爱",
+    "date": "2000-01-01"
+  },
+  "birthdays": [
+    {
+      "name": "用户1",
+      "date": "2000-01-01",
+      "calendar": "lunar"
+    },
+    {
+      "name": "用户2",
+      "date": "2000-01-01",
+      "calendar": "lunar"
+    }
+  ],
+  "hitokoto": {
+    "type": "d"
+  },
+  "wechat": {
+    "appId": "你的微信公众号测试号appId",
+    "appSecret": "你的微信公众号测试号appSecret",
+    "templateId": "你的模板ID",
+    "toUsers": [
+      "用户1的openid",
+      "用户2的openid"
+    ]
+  },
+  "template": {
+    "url": "http://weixin.qq.com/download"
+  }
+}
