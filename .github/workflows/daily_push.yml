@@ -1,0 +1,28 @@
+name: Daily Push
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC 23:30 = Asia/Shanghai 07:30
+    - cron: "30 23 * * *"
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run daily push
+        run: npm start
+        env:
+          DAILY_PUSH_CONFIGS: ${{ secrets.DAILY_PUSH_CONFIGS }}
